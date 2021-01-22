@@ -14,3 +14,9 @@ jobs:
           run: cmake --configure .
         - name: build
           run: cmake --build .
+        - name: Archive binary
+          uses: actions/upload-artifact@v2
+          with:
+            name: binary
+            path: |
+              c-opengl-bench
