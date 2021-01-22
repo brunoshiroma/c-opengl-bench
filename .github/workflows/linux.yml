@@ -10,5 +10,7 @@ jobs:
         - uses: actions/checkout@v2
         - name: install freeglut
           run: sudo apt install freeglut3-dev
+        - name: configure cmake
+          run: cmake --configure .
         - name: build
           run: cmake --build .
