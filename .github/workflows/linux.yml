@@ -1,0 +1,16 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      name: build
+      steps:
+        - uses: actions/checkout@v2
+        - name: install freeglut
+          run: sudo apt install freeglut3-dev
+        - name: build
+          env:
+            CC: gcc
+          run: cmake --build .
