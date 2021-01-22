@@ -64,3 +64,5 @@ Mkfile.old
 dkms.conf
 
 .vscode
+
+c-opengl-bench
